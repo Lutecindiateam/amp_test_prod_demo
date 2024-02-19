@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { Amplify, Auth } from 'aws-amplify';
+import awsExports from './aws-exports'
+import { Storage } from 'aws-amplify';
+
+Amplify.configure(awsExports)
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -19,6 +24,9 @@ function App() {
     formData.append('file', selectedFile);
 
     try {
+      const result = await Storage.put(selectedFile, selectedFile.file, {
+        contentType: selectedFile.file.type, // Provide the content type if known
+      });
       // const response = await axios.post('YOUR_BACKEND_ENDPOINT', formData, {
       //   headers: {
       //     'Content-Type': 'multipart/form-data'
