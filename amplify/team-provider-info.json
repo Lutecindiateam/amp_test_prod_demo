@@ -23,6 +23,14 @@
       "StackName": "amplify-prod-dev-134645",
       "StackId": "arn:aws:cloudformation:ap-south-1:583657565141:stack/amplify-prod-dev-134645/395ecac0-ceff-11ee-a29a-0a6350d21a31",
       "AmplifyAppId": "d3ci1jka7ywsg5"
+    },
+    "categories": {
+      "auth": {
+        "prode8a4f459": {}
+      },
+      "storage": {
+        "s3033e72d8": {}
+      }
     }
   }
 }
